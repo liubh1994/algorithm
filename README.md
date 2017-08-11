@@ -1,1 +1,1 @@
-# algorithm
+# This is some algorithm demo by Python, JavaScript and Java.(mabey has C and C++)
