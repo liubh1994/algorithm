@@ -1,4 +1,10 @@
 def binary_search(data_list, item):
+    """
+    二分查找 O(logN)
+    :param data_list: 待查找有序递增数组
+    :param item: 查找值
+    :return: 返回待查值所在位置
+    """
     low = 0
     high = len(data_list) - 1
 
