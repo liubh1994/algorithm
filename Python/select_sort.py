@@ -20,8 +20,7 @@ def select_sort(data_array, sort_flag=0):
             if sorted_flag is True:
                 continue
             if index != out_index:
-                data_array[index] = data_array[out_index]
-                data_array[out_index] = max_value
+                data_array[index], data_array[out_index]  = data_array[out_index], data_array[index]
     else:
         for out_index in range(0, len(data_array)):
             min_value = data_array[out_index]
@@ -35,8 +34,7 @@ def select_sort(data_array, sort_flag=0):
             if sorted_flag is True:
                 continue
             if index != out_index:
-                data_array[index] = data_array[out_index]
-                data_array[out_index] = min_value
+                data_array[index], data_array[out_index] = data_array[out_index], data_array[index]
     return data_array
 
 
@@ -54,9 +52,7 @@ def pop_sort(data_array, sort_flag=0):
             sorted_flag = True
             for in_index in range(0, len(data_array)-out_index-1):
                 if data_array[in_index] < data_array[in_index+1]:
-                    tmp_value = data_array[in_index]
-                    data_array[in_index] = data_array[in_index+1]
-                    data_array[in_index+1] = tmp_value
+                    data_array[in_index], data_array[in_index+1] = data_array[in_index+1], data_array[in_index]
                     sorted_flag = False
             if sorted_flag is True:
                 break
@@ -65,9 +61,7 @@ def pop_sort(data_array, sort_flag=0):
             sorted_flag = True
             for in_index in range(0, len(data_array)-out_index-1):
                 if data_array[in_index] > data_array[in_index+1]:
-                    tmp_value = data_array[in_index]
-                    data_array[in_index] = data_array[in_index+1]
-                    data_array[in_index+1] = tmp_value
+                    data_array[in_index], data_array[in_index + 1] = data_array[in_index + 1], data_array[in_index]
                     sorted_flag = False
             if sorted_flag is True:
                 break
